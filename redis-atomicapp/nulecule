@@ -1,0 +1,16 @@
+---
+specversion: 0.0.1-alpha
+id: atomicapp-redis-100
+metadata:
+  name: redis 
+  appversion: 1.0.0 
+  description: a redis server 
+graph:
+  redis:
+    artifacts:
+      kubernetes:
+        - file://artifacts/kubernetes/redis-master-service.json
+        - file://artifacts/kubernetes/redis-master-controller.json
+  kubernetes:
+    labels:
+      - redis

@@ -1,0 +1,13 @@
+apiVersion: v1beta3
+kind: Pod
+metadata:
+  name: frontend 
+  labels: 
+    name: frontned 
+spec: 
+  containers: 
+    - image: goern/weather-frontend 
+      name: frontend 
+      ports: 
+        - containerPort: 80
+          name: frontend 

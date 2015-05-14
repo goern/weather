@@ -1,0 +1,21 @@
+---
+specversion: 0.0.1-alpha
+id: atomicapp-weather-frontend-100
+metadata:
+  name: Weather Frontend 
+  appversion: 1.0.0 
+  description: This is a Weather Data Collector Web Frontend 
+  license:
+    name: GNU AFFERO GENERAL PUBLIC LICENSE, Version 3
+    url: https://www.gnu.org/licenses/agpl-3.0.html
+graph:
+  weather-frontend-atomicapp:
+    artifacts:
+      kubernetes:
+        - file://artifacts/kubernetes/frontend-service.json
+        - file://artifacts/kubernetes/frontend-pod.json
+  kubernetes:
+    labels:
+      - redis
+      - weather 
+      - frontend
